@@ -150,26 +150,41 @@
 
 
 
-import React, { useState, useCallback } from "react";
+// import React, { useState, useCallback } from "react";
 
-const ChildButton = React.memo(({ onClick }) => {
-  console.log("ChildButton rendered!");
-  return <button onClick={onClick}>Increment</button>;
-});
+// const ChildButton = React.memo(({ onClick }) => {
+//   console.log("ChildButton rendered!");
+//   return <button onClick={onClick}>Increment</button>;
+// });
 
-function App() {
-  const [count, setCount] = useState(0);
+// function App() {
+//   const [count, setCount] = useState(0);
 
-  const handleIncrement = useCallback(() => {
-    setCount((prev) => prev + 1);
-  }, []); // function recreated only if dependencies change
+//   const handleIncrement = useCallback(() => {
+//     setCount((prev) => prev + 1);
+//   }, []); // function recreated only if dependencies change
 
+//   return (
+//     <div>
+//       <h3>Count: {count}</h3>
+//       <ChildButton onClick={handleIncrement} />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+import React from 'react'
+import Card from './componets/customComponets/Card'
+
+const App = () => {
   return (
     <div>
-      <h3>Count: {count}</h3>
-      <ChildButton onClick={handleIncrement} />
+      <Card titel="User Details" des="My name is sharan , i am from manvi ,i'm working as front end developer in Travercel Tech"/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
