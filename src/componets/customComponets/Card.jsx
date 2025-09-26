@@ -7,7 +7,7 @@ const Card = ({titel, des}) => {
     <div style={{border:2, borderColor:"pink", backgroundColor:"grey", padding:10, borderRadius:10}}>
         <h1 style={{color:"red" }}>{titel}</h1>
         <p style={{padding:5}}>{des}</p>
-
+<Button/>
       
     </div>
   )
